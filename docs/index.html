@@ -31,13 +31,6 @@
 
     font-weight: normal;
 }
-    
-@font-face {
-    font-family: 'ab-four';
-    src: "Arial Black", local('Arial Black'), local('Arial-Black'), local('ariblk');
-
-    font-weight: normal;
-}
 
 /* weight: bold, style: normal */
 @font-face {
@@ -108,7 +101,10 @@ html {
 .ab_one { font-family: 'ab-one'; }
 .ab_two { font-family: 'ab-two'; }
 .ab_three { font-family: 'ab-three'; }
-.ab_four { font-family: 'ab-four'; }
+
+.ab_one_with_literal_first { font-family: "Arial Black", 'ab-one'; }
+    .ab_two_with_literal_first { font-family: "Arial Black", 'ab-two'; }
+    .ab_three_with_literal_first { font-family: "Arial Black", 'ab-three'; }
 
 </style>
 </head>
@@ -130,10 +126,14 @@ html {
 <div class="ab_three fw_eb"></div>
 <br>
 
-<div class="ab_four fw_n"></div>
-<div class="ab_four fw_b"></div>
-<div class="ab_four fw_eb"></div>
+<div class="ab_one_with_literal_first fw_n"></div>
+<div class="ab_one_with_literal_first fw_b"></div>
+<div class="ab_one_with_literal_first fw_eb"></div>
+<br>
 
+<div class="ab_three_with_literal_first fw_n"></div>
+<div class="ab_three_with_literal_first fw_b"></div>
+<div class="ab_three_with_literal_first fw_eb"></div>
 <script>
     // @link http://youmightnotneedjquery.com/#ready
     function ready(fn) {
